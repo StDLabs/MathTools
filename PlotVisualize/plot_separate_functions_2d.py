@@ -1,21 +1,25 @@
 import datetime
 import matplotlib.pyplot as plt
 from MathTools.log_files import check_log_folder
+from MathTools.MultidimArrays.restructure_set_of_functions import restructure_set_of_functions
 
 
 def plot_separate_functions_2d(M: list, ttl: list, input_type: int, key_save: bool, key_show: bool):
     """
-    Description
-        input_type = 0 means M = [F,X]. F = [F1, F2, ..., FN], Fi = [Fi1, Fi2, ..., FiJi] - ordinate points of function.
-        Ji - number of points for Fi. X = [X1, ..., XN]. Xi = [Xi1, Xi2, ..., XiJi] - abscissa points Xij of function.
+    This function is responsible for plotting a set of 2D functions and saving or displaying
+    the plots based on the provided input. For each function in M, it creates a new figure, sets the title,
+    adds a grid, and plots the function using matplotlib.
 
-        input_type = 1 means M = [[F1,X1],[F2,X2], ... [FN,XN]], Fi = [Fi1, Fi2, ..., FiJi], Xi = [Xi1, Xi2, ..., XiJi].
-
-    :param M: set of functions
-    :param ttl: ttl = ['ttl1', 'ttl2', ... , 'ttlN'] - titles of functions Fi
-    :param input_type: input_type = 0, 1 (see description)
-    :param key_save: True/False - whether save or not
-    :param key_show: True/False - whether show or not
+    :param M: A list containing the data points for the functions to be plotted
+    :param ttl: ttl = ['ttl1', 'ttl2', ... , 'ttlN'] - A list of titles for the functions
+    :param input_type: An integer value (0 or 1) indicating the format of the input data in M.
+        input_type = 0 means M = [F,X]. F = [F1, F2, ..., FN], Fi = [Fi1, Fi2, ..., FiJi], Ji - number of points for Fi,
+            X = [X1, ..., XN], Xi = [Xi1, Xi2, ..., XiJi]
+        input_type = 1 means M = [[F1,X1],[F2,X2], ... [FN,XN]]. If input_type is 1, it calls
+            the restructure_set_of_functions function to restructure the input data M.
+    :param key_save: True/False - A boolean flag indicating whether to save the plots as image files. If key_save
+        is True, it creates a folder based on the current date to save the plot images
+    :param key_show: True/False - A boolean flag indicating whether to display the plots.
     :return:
     """
 
@@ -42,28 +46,3 @@ def plot_separate_functions_2d(M: list, ttl: list, input_type: int, key_save: bo
                     P + 1 + i) + '.png')
 
     return
-
-
-def restructure_set_of_functions(Sf: list) -> list:
-    """
-
-    :param Sf: Sf = [[F0, X0, Y0, ... ], [F1, X1, Y1, ... ], ... ] - set of N-dimensional functions.
-               Fi = [fi0, fi1, ... ], Xi = [xi0, xi1, ... ], Yi = [yi0, yi1, ... ]
-    :return: F = [F0, F1, ... ] - set of sets of destinations of functions.
-             X = [X1, X2, ... ] - set of domains of functions.
-             M = [F, X].
-    """
-
-    n = len(Sf[0]) - 1  # dimension
-    F = []
-
-    for i in range(0, len(Sf)):
-        F.append(Sf[i][0])
-    M = [F]
-    for j in range(1, n + 1):
-        Ms = []
-        for i in range(0, len(Sf)):
-            Ms.append(Sf[i][j])
-        M.append(Ms)
-
-    return M
