@@ -4,16 +4,22 @@ import numpy as np
 
 def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
     """
+    The purpose of the function is to calculate the line equation based on the provided input parameters
+    (W and input_type), and then generate a set of points along that line within the specified boundaries (a and b)
+    with the desired number of points (n).
 
-    :param W: list of all input parameters of the line
-    :param input_type: input_type = 0 means W = [B, k] - parameters of a line f = k*x + B.
-                       input_type = 1 means W = [M0, M1] - line trough two points M0 = [f0, x0], M1 = [f1, x1].
-                       input_type = 2 means W = [s, p]. s - name of axis Ox or Oy (see dict_directions)
-                       a, b, N refer to the axis. p - coordinate of intersection.
-    :param a: left boundary
-    :param b: right boundary
-    :param n: number of points
-    :return: F = [F0, F1, ...], X = [X0, X1, ...] - points of the line
+    :param W: A list containing the input parameters that define the line
+    :param input_type: An integer value that specifies how the line is defined (0, 1, or 2)
+        input_type = 0 means W = [B, k] - contains the slope (k) and y-intercept (B) of the line in the form f = k*x + B
+        input_type = 1 means W = [M0 = [f0, x0], M1 = [f1, x1]] - contains two points through which the line passes.
+        input_type = 2 means W = [s, p]. s - contains the name of the axis (s) and the coordinate
+            of the intersection point (p) (see dict_directions),
+            where a, b, n refer to the s-axis. p - coordinate of intersection.
+    :param a: The left boundary of the line segment
+    :param b: The right boundary of the line segment
+    :param n: The number of points to generate along the line segment
+    :return: F = [F0, F1, ...], X = [X0, X1, ...] - The function returns two lists: F and X,
+        representing the y-coordinates and x-coordinates, respectively, of the points along the line segment
     """
 
     if input_type == 0:
