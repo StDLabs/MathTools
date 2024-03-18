@@ -1,4 +1,5 @@
 from MathTools.NumMethods.cramers_rule import cramers_rule
+from MathTools.PlotVisualize.plot_separate_functions_2d import plot_separate_functions_2d
 
 
 def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
@@ -34,3 +35,11 @@ def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, 
     F = [A * (X[i] ** 2) + B * X[i] + C for i in range(0, n)]
 
     return F, X
+
+
+def parabola_2d_example():
+    F1, X1 = parabola_2d(W=[3, -2, 5], input_type=0, a=-5, b=5, n=100)
+    F2, X2 = parabola_2d(W=[[3, -4], [-1, 1], [7, 4]], input_type=1, a=-5, b=5, n=100)
+
+    plot_separate_functions_2d([[F1, X1], [F2, X2]], ['Title1', 'Title2'], 1, False, True)
+    return
