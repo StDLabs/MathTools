@@ -1,7 +1,6 @@
 import numpy as np
 from MathTools.math_dicts import dict_directions
-from MathTools.PlotVisualize.plot_separate_functions_2d import plot_separate_functions_2d
-from MathTools.PlotVisualize.plot_dots_2d import plot_dots_2d
+from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_functions_2d
 
 
 def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
@@ -50,18 +49,20 @@ def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list
 
 
 def line_2d_example():
+
     F1, X1 = line_2d(W=[3, -1], input_type=0, a=-5, b=5, n=50)
     F2, X2 = line_2d(W=[5, -2], input_type=0, a=-5, b=5, n=50)
     F3, X3 = line_2d(W=[[1, 2], [-3, -4]], input_type=1, a=-5, b=5, n=50)
     F4, X4 = line_2d(W=['x', -2], input_type=2, a=-5, b=5, n=50)
     F5, X5 = line_2d(W=['y', -3], input_type=2, a=-5, b=5, n=50)
 
-    plot_separate_functions_2d([[F1, X1], [F2, X2], [F3, X3], [F4, X4], [F5, X5]],
-                               ['Title1', 'Title2', 'Title3', 'Title4', 'Title5'], 1, False, True)
-
-    Gx = X1 + X2 + X3 + X4 + X5
-    Gy = F1 + F2 + F3 + F4 + F5
-    G = [Gx, Gy]
-    plot_dots_2d(G, input_type=1, key_save=False, key_show=True)
+    S = {'F1': {'F': F1, 'X': X1, 'T': 'Dash', 'Label': 'W=[3, -1]', 'Color': 'r', 'Line width': 1},
+         'F2': {'F': F2, 'X': X2, 'T': 'Line', 'Label': 'W=[5, -2]', 'Color': 'b', 'Line width': 1.2},
+         'F3': {'F': F3, 'X': X3, 'T': 'Line', 'Label': 'W=[[1, 2], [-3, -4]]', 'Color': 'k', 'Line width': 1.5},
+         'F4': {'F': F4, 'X': X4, 'T': 'Dash', 'Label': 'W=[x, -2]', 'Color': 'c', 'Line width': 2},
+         'F5': {'F': F5, 'X': X5, 'T': 'Line', 'Label': 'W=[y, -3]', 'Color': 'y', 'Line width': 2.2},
+         'F6': {'F': [1, -3], 'X': [2, -4], 'T': 'Dots', 'Label': '[1, 2], [-3, -4]', 'Color': 'k', 'Line width': 1.5}}
+    W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
+    plot_sets_of_functions_2d(W, False, True, False, 13)
 
     return
