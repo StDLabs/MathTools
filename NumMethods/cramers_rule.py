@@ -8,7 +8,7 @@ def cramers_rule(A: list, B: list) -> list:
     The function returns a list X containing the solutions to the system of linear equations.
     Cramer's Rule provides a way to solve systems of linear equations by computing determinants of matrices formed
     by replacing columns of the coefficient matrix with the constant terms. It is particularly useful for small systems
-    of equations but can be computationally expensive for larger systems
+    of equations but can be computationally expensive for larger systems. [Analytical geometry, Equations and systems]
 
         There's a system of linear equations:
 
