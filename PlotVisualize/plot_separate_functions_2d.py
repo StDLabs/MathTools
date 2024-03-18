@@ -2,6 +2,7 @@ import datetime
 import matplotlib.pyplot as plt
 from MathTools.log_files import check_log_folder
 from MathTools.MultidimArrays.restructure_set_of_functions import restructure_set_of_functions
+from MathTools.Functions.line_2d import line_2d
 
 
 def plot_separate_functions_2d(M: list, ttl: list, input_type: int, key_save: bool, key_show: bool):
@@ -44,5 +45,19 @@ def plot_separate_functions_2d(M: list, ttl: list, input_type: int, key_save: bo
             plt.savefig(
                 'Data/Chapter ' + str(now.year) + '.' + str(now.month) + '.' + str(now.day) + '/' + str(N) + '.' + str(
                     P + 1 + i) + '.png')
+
+    return
+
+
+def plot_separate_functions_2d_example():
+
+    F1, X1 = line_2d(W=[3, -1], input_type=0, a=-5, b=5, n=50)
+    F2, X2 = line_2d(W=[5, -2], input_type=0, a=-5, b=5, n=50)
+    F3, X3 = line_2d(W=[[1, 2], [-3, -4]], input_type=1, a=-5, b=5, n=50)
+    F4, X4 = line_2d(W=['x', -2], input_type=2, a=-5, b=5, n=50)
+    F5, X5 = line_2d(W=['y', -3], input_type=2, a=-5, b=5, n=50)
+
+    plot_separate_functions_2d([[F1, X1], [F2, X2], [F3, X3], [F4, X4], [F5, X5]],
+                               ['Title1', 'Title2', 'Title3', 'Title4', 'Title5'], 1, False, True)
 
     return
