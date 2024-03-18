@@ -88,7 +88,7 @@ def plot_sets_of_functions_2d(W: dict, key_save: bool, key_show: bool, path: str
                 plt.savefig('Data/Chapter ' + str(now.year) + '.' + str(now.month) + '.' + str(now.day) + '/' + str(N)
                             + '.' + str(P + 1 + i) + '.png')
             else:
-                plt.savefig(path + str('\\') + 'Budget dynamics ' + str(now.year) + '.' + str(now.month)
+                plt.savefig(path + str('\\') + 'Figure ' + str(now.year) + '.' + str(now.month)
                             + '.' + str(now.day) + '.png')
 
     return
