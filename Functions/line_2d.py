@@ -1,12 +1,13 @@
-from MathTools.math_dicts import dict_directions
 import numpy as np
+from MathTools.math_dicts import dict_directions
+from MathTools.PlotVisualize.plot_separate_functions_2d import plot_separate_functions_2d
 
 
 def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
     """
     The purpose of the function is to calculate the line equation based on the provided input parameters
     (W and input_type), and then generate a set of points along that line within the specified boundaries (a and b)
-    with the desired number of points (n).
+    with the desired number of points (n). [Analytical geometry / Functions]
 
     :param W: A list containing the input parameters that define the line
     :param input_type: An integer value that specifies how the line is defined (0, 1, or 2)
@@ -45,3 +46,15 @@ def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list
         F = SP[s]
 
     return F, X
+
+
+def line_2d_example():
+    F1, X1 = line_2d(W=[3, -1], input_type=0, a=-5, b=5, n=10)
+    F2, X2 = line_2d(W=[5, -2], input_type=0, a=-5, b=5, n=10)
+    F3, X3 = line_2d(W=[[1, 2], [-3, -4]], input_type=1, a=-5, b=5, n=10)
+    F4, X4 = line_2d(W=['x', -2], input_type=2, a=-5, b=5, n=10)
+    F5, X5 = line_2d(W=['y', -3], input_type=2, a=-5, b=5, n=10)
+
+    plot_separate_functions_2d([[F1, X1], [F2, X2], [F3, X3], [F4, X4], [F5, X5]],
+                               ['Title1', 'Title2', 'Title3', 'Title4', 'Title5'], 1, False, True)
+    return
