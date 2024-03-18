@@ -1,6 +1,7 @@
 import datetime
 from MathTools.log_files import check_log_folder
 import matplotlib.pyplot as plt
+from MathTools.Functions.line_2d import line_2d_example
 
 
 def plot_sets_of_functions_2d(W: dict, key_save: bool, key_show: bool, path: str, height_of_picture: float):
@@ -91,4 +92,9 @@ def plot_sets_of_functions_2d(W: dict, key_save: bool, key_show: bool, path: str
                 plt.savefig(path + str('\\') + 'Figure ' + str(now.year) + '.' + str(now.month)
                             + '.' + str(now.day) + '.png')
 
+    return
+
+
+def plot_sets_of_functions_2d_example():
+    line_2d_example()
     return
