@@ -33,7 +33,7 @@ def plot_sets_of_functions_2d(W: dict, key_save: bool, key_show: bool, path: str
 
         LWi - line width (number)
 
-        Layout
+        Layout (general layouts for input dictionaries)
             S = {'F0': {'F': F0, 'X': X0, 'T': 'Dots', 'Label': 'Label1', 'Color': 'k', 'Line width': LW1},
             'F1': {'F': F, 'X': X, 'T': 'Line', 'Label': 'Label2', 'Color': 'k', 'Line width': LW2}}
             W = {'W1': {'S': S, 'ttl': 'LOL', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
