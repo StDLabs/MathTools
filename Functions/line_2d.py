@@ -50,20 +50,15 @@ def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list
 
 
 def line_2d_example():
-    F1, X1 = line_2d(W=[3, -1], input_type=0, a=-5, b=5, n=10)
-    F2, X2 = line_2d(W=[5, -2], input_type=0, a=-5, b=5, n=10)
-    F3, X3 = line_2d(W=[[1, 2], [-3, -4]], input_type=1, a=-5, b=5, n=10)
-    F4, X4 = line_2d(W=['x', -2], input_type=2, a=-5, b=5, n=10)
-    F5, X5 = line_2d(W=['y', -3], input_type=2, a=-5, b=5, n=10)
+    F1, X1 = line_2d(W=[3, -1], input_type=0, a=-5, b=5, n=50)
+    F2, X2 = line_2d(W=[5, -2], input_type=0, a=-5, b=5, n=50)
+    F3, X3 = line_2d(W=[[1, 2], [-3, -4]], input_type=1, a=-5, b=5, n=50)
+    F4, X4 = line_2d(W=['x', -2], input_type=2, a=-5, b=5, n=50)
+    F5, X5 = line_2d(W=['y', -3], input_type=2, a=-5, b=5, n=50)
 
-    # plot_separate_functions_2d([[F1, X1], [F2, X2], [F3, X3], [F4, X4], [F5, X5]],
-    #                            ['Title1', 'Title2', 'Title3', 'Title4', 'Title5'], 1, False, True)
+    plot_separate_functions_2d([[F1, X1], [F2, X2], [F3, X3], [F4, X4], [F5, X5]],
+                               ['Title1', 'Title2', 'Title3', 'Title4', 'Title5'], 1, False, True)
 
-    print(type(X1))
-    print(type(X2))
-    print(type(X3))
-    print(type(X4))
-    print(type(X5))
     Gx = X1 + X2 + X3 + X4 + X5
     Gy = F1 + F2 + F3 + F4 + F5
     G = [Gx, Gy]
