@@ -1,5 +1,6 @@
 from MathTools.NumMethods.cramers_rule import cramers_rule
 from MathTools.PlotVisualize.plot_separate_functions_2d import plot_separate_functions_2d
+from MathTools.PlotVisualize.plot_dots_2d import plot_dots_2d
 
 
 def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
@@ -38,8 +39,14 @@ def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, 
 
 
 def parabola_2d_example():
-    F1, X1 = parabola_2d(W=[3, -2, 5], input_type=0, a=-5, b=5, n=100)
-    F2, X2 = parabola_2d(W=[[3, -4], [-1, 1], [7, 4]], input_type=1, a=-5, b=5, n=100)
+    F1, X1 = parabola_2d(W=[1, 2, 3], input_type=0, a=-4, b=3, n=100)
+    F2, X2 = parabola_2d(W=[[8, -4], [-2, 0.5], [4, 2]], input_type=1, a=-4, b=3, n=100)
 
     plot_separate_functions_2d([[F1, X1], [F2, X2]], ['Title1', 'Title2'], 1, False, True)
+
+    Gx = X1 + X2
+    Gy = F1 + F2
+    G = [Gx, Gy]
+    plot_dots_2d(G, input_type=1, key_save=False, key_show=True)
+
     return
