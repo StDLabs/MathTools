@@ -1,7 +1,7 @@
 import datetime
 from MathTools.log_files import check_log_folder
 import matplotlib.pyplot as plt
-from MathTools.Functions.line_2d import line_2d_example
+import matplotlib.dates as mdates
 
 
 def plot_sets_of_functions_2d(W: dict, key_save: bool, key_show: bool, path: str, height_of_picture: float):
@@ -11,6 +11,8 @@ def plot_sets_of_functions_2d(W: dict, key_save: bool, key_show: bool, path: str
     The function does not have a direct return value. Instead, it either displays the plot(s) on the screen
     (if key_show is True) or saves the plot(s) as image file(s) (if key_save is True). The image file(s) are saved
     in the specified directory (path) or in the Data/Chapter YYYY.MM.DD/ directory if path is set to 'Default'.
+
+    Examples: line_2d_example in Functions/line_2d.py
 
     :param W: A dictionary containing the sets of functions to be plotted. The structure of W is as follows:
 
@@ -92,9 +94,4 @@ def plot_sets_of_functions_2d(W: dict, key_save: bool, key_show: bool, path: str
                 plt.savefig(path + str('\\') + 'Figure ' + str(now.year) + '.' + str(now.month)
                             + '.' + str(now.day) + '.png')
 
-    return
-
-
-def plot_sets_of_functions_2d_example():
-    line_2d_example()
     return
