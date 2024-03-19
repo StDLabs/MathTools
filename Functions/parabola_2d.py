@@ -46,7 +46,7 @@ def parabola_2d_example():
 
     S = {'F1': {'F': F1, 'X': X1, 'T': 'Dash', 'Label': 'W=[1, 2, 3]', 'Color': 'r', 'Line width': 1},
          'F2': {'F': F2, 'X': X2, 'T': 'Line', 'Label': 'W=[[8, -4], [-2, 0.5], [4, 2]', 'Color': 'b', 'Line width': 1.2},
-         'F3': {'F': [8, -2, 4], 'X': [-4, 0.5, 2], 'T': 'Dots', 'Label': '[1, 2], [-3, -4]', 'Color': 'k', 'Line width': 1.5}}
+         'F3': {'F': [8, -2, 4], 'X': [-4, 0.5, 2], 'T': 'Dots', 'Label': '[8, -4], [-2, 0.5], [4, 2]', 'Color': 'k', 'Line width': 1.5}}
     W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
     plot_sets_of_functions_2d(W, False, True, False, 13)
 
