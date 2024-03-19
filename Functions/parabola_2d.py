@@ -1,6 +1,5 @@
 from MathTools.NumMethods.cramers_rule import cramers_rule
-from MathTools.PlotVisualize.plot_separate_functions_2d import plot_separate_functions_2d
-from MathTools.PlotVisualize.plot_dots_2d import plot_dots_2d
+from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_functions_2d
 
 
 def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
@@ -42,11 +41,10 @@ def parabola_2d_example():
     F1, X1 = parabola_2d(W=[1, 2, 3], input_type=0, a=-4, b=3, n=100)
     F2, X2 = parabola_2d(W=[[8, -4], [-2, 0.5], [4, 2]], input_type=1, a=-4, b=3, n=100)
 
-    plot_separate_functions_2d([[F1, X1], [F2, X2]], ['Title1', 'Title2'], 1, False, True)
-
-    Gx = X1 + X2
-    Gy = F1 + F2
-    G = [Gx, Gy]
-    plot_dots_2d(G, input_type=1, key_save=False, key_show=True)
+    S = {'F1': {'F': F1, 'X': X1, 'T': 'Dash', 'Label': 'W=[1, 2, 3]', 'Color': 'r', 'Line width': 1},
+         'F2': {'F': F2, 'X': X2, 'T': 'Line', 'Label': 'W=[[8, -4], [-2, 0.5], [4, 2]', 'Color': 'b', 'Line width': 1.2},
+         'F3': {'F': [8, -2, 4], 'X': [-4, 0.5, 2], 'T': 'Dots', 'Label': '[1, 2], [-3, -4]', 'Color': 'k', 'Line width': 1.5}}
+    W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
+    plot_sets_of_functions_2d(W, False, True, False, 13)
 
     return
