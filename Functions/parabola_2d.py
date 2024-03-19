@@ -4,11 +4,14 @@ from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_funct
 
 def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
     """
+    The function calculates the points of a 2D parabola based on either the provided coefficients or three points
+    on the parabola, within the specified range and with the desired number of points
 
-    :param W: list of all input parameters of parabola
+    :param W: list of all input parameters of parabola. A list containing either the coefficients of the parabola
+        equation [A, B, C] or three points on the parabola [[F0, X0], [F1, X1], [F2, X2]]
     :param input_type: input_type = 0 means W = [A, B, C]  - parameters of parabola F = A*(X**2) + B*X + C.
                        input_type = 1 means W = [M0, M1, M2] - parabola that is uniquely determined
-                                            by three points M0, M1, M2. M0 = [F0, X0], M1 = [F1, X1], M2 = [F2, X2].
+                            by three points M0, M1, M2. M0 = [F0, X0], M1 = [F1, X1], M2 = [F2, X2].
     :param a: left boundary
     :param b: right boundary
     :param n: number of points
