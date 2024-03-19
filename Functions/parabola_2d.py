@@ -41,6 +41,7 @@ def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, 
 
 
 def parabola_2d_example():
+
     F1, X1 = parabola_2d(W=[1, 2, 3], input_type=0, a=-4, b=3, n=100)
     F2, X2 = parabola_2d(W=[[8, -4], [-2, 0.5], [4, 2]], input_type=1, a=-4, b=3, n=100)
 
