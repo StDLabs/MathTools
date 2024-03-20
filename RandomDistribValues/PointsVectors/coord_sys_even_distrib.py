@@ -2,7 +2,7 @@ from MathTools.RandomDistribValues.PointsVectors.vector_even_distrib import vect
 import math as m
 
 
-def random_coordinate_system_even_distribution(M: list):
+def coord_sys_even_distrib(M: list):
     """
 
     :param M: M = [x_ini, y_ini, z_ini] - origin of coordinate system
