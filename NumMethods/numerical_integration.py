@@ -5,16 +5,6 @@ def numerical_integration(F: list, Fm: list, X: list, a: float, b: float, rule: 
     Performs numerical integration using various rules, such as the rectangular, trapezoidal, and Simpson's rules.
     Supports both constant and variable step sizes
 
-        rule = 'left rectangular' - Left rectangle rule of numerical integration
-
-        rule = 'right rectangular' - Right rectangle rule of numerical integration
-
-        rule = 'middle rectangular' - Middle rectangle rule of numerical integration
-
-        rule = 'trapezoidal' - Trapezoidal rule of numerical integration
-
-        rule = 'simpson' - Simpson's rule of numerical integration
-
     :param F: F = [F0, F1, ...]
     :param Fm: Fm = [Fm01, Fm12, Fm23, ...] - mid points between Fi and Fi+1 for Middle rectangular rule
     :param X: X = [X0, X1, ...] (for variable step)
