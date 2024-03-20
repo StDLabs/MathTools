@@ -1,7 +1,7 @@
 import numpy as np
 import math as m
 from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
-from MathTools.FunctionPoints.PlaneCurves.line_2d import line_2d
+from MathTools.TurplesPoints.PlaneCurves.line_2d import line_2d
 
 
 def logarithm_nat(W: list, a: float, b: float, n: int) -> [list, list]:

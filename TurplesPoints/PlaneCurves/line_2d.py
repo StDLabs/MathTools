@@ -7,7 +7,7 @@ def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list
     """
     The purpose of the function is to calculate the line equation based on the provided input parameters
     (W and input_type), and then generate a set of points along that line within the specified boundaries (a and b)
-    with the desired number of points (n). [Analytical geometry / FunctionPoints]
+    with the desired number of points (n). [Analytical geometry / TurplesPoints]
 
     :param W: A list containing the input parameters that define the line
     :param input_type: An integer value that specifies how the line is defined (0, 1, or 2)

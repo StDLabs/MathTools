@@ -12,7 +12,7 @@ def plot_sets_of_functions(W: dict, key_save: bool, key_show: bool, path: str, h
     (if key_show is True) or saves the plot(s) as image file(s) (if key_save is True). The image file(s) are saved
     in the specified directory (path) or in the Data/Chapter YYYY.MM.DD/ directory if path is set to 'Default'.
 
-    Examples: line_2d_example in FunctionPoints/line_2d.py
+    Examples: line_2d_example in TurplesPoints/line_2d.py
 
     :param W: A dictionary containing the sets of functions to be plotted. The structure of W is as follows:
 

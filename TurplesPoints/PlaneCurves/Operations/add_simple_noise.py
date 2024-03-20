@@ -1,7 +1,7 @@
 from MathTools.math_dicts import dict_directions
 import copy
 from MathTools.RandomDistribValues.random_variables import random_even_1d_distrib
-from MathTools.FunctionPoints.PlaneCurves.polynomial import polynomial
+from MathTools.TurplesPoints.PlaneCurves.polynomial import polynomial
 from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
 
 

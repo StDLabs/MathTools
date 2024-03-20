@@ -1,6 +1,6 @@
 import numpy as np
 from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
-from MathTools.FunctionPoints.PlaneCurves.line_2d import line_2d
+from MathTools.TurplesPoints.PlaneCurves.line_2d import line_2d
 
 
 def hyperbola(W: list, input_type: int, a: float, b: float, n) -> [list, list]:

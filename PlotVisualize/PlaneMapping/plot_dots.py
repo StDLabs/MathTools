@@ -4,7 +4,7 @@ from MathTools.MultidimArrays.transpose_vector_field import transpose_vector_fie
 import copy
 import matplotlib.pyplot as plt
 import numpy as np
-from MathTools.FunctionPoints.PlaneCurves.line_2d import line_2d
+from MathTools.TurplesPoints.PlaneCurves.line_2d import line_2d
 
 
 def plot_dots(G: list, input_type: int, key_save: bool, key_show: bool):
