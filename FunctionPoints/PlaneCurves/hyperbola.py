@@ -1,9 +1,9 @@
 import numpy as np
-from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_functions_2d
-from MathTools.Functions.line_2d import line_2d
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
+from MathTools.FunctionPoints.PlaneCurves.line_2d import line_2d
 
 
-def hyperbola_2d(W: list, input_type: int, a: float, b: float, n) -> [list, list]:
+def hyperbola(W: list, input_type: int, a: float, b: float, n) -> [list, list]:
     """
     The hyperbola_2d function is designed to generate points on a 2D hyperbola curve based on the provided parameters
 
@@ -25,10 +25,10 @@ def hyperbola_2d(W: list, input_type: int, a: float, b: float, n) -> [list, list
     return F, X
 
 
-def hyperbola_2d_example():
+def hyperbola_example():
 
-    F1, X1 = hyperbola_2d(W=[2, 3.5, 1, 1], input_type=0, a=-0.75, b=1, n=100)
-    F2, X2 = hyperbola_2d(W=[2, 3.5, 1, 1], input_type=0, a=-3, b=-1.25, n=100)
+    F1, X1 = hyperbola(W=[2, 3.5, 1, 1], input_type=0, a=-0.75, b=1, n=100)
+    F2, X2 = hyperbola(W=[2, 3.5, 1, 1], input_type=0, a=-3, b=-1.25, n=100)
     F3, X3 = line_2d(W=['x', 2], input_type=2, a=-3, b=1, n=50)
     F4, X4 = line_2d(W=['y', -1], input_type=2, a=-15, b=15, n=50)
 
@@ -37,6 +37,6 @@ def hyperbola_2d_example():
          'F3': {'F': F3, 'X': X3, 'T': 'Dash', 'Label': 'W=[x, 2] asymptote', 'Color': 'c', 'Line width': 2},
          'F4': {'F': F4, 'X': X4, 'T': 'Line', 'Label': 'W=[y, -1] asymptote', 'Color': 'y', 'Line width': 2.2}}
     W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
-    plot_sets_of_functions_2d(W, False, True, False, 13)
+    plot_sets_of_functions(W, False, True, False, 13)
 
     return
