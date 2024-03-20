@@ -4,10 +4,10 @@ from MathTools.MultidimArrays.transpose_vector_field import transpose_vector_fie
 import copy
 import matplotlib.pyplot as plt
 import numpy as np
-from MathTools.Functions.line_2d import line_2d
+from MathTools.FunctionPoints.PlaneCurves.line_2d import line_2d
 
 
-def plot_dots_2d(G: list, input_type: int, key_save: bool, key_show: bool):
+def plot_dots(G: list, input_type: int, key_save: bool, key_show: bool):
     """
     The plot_dots_2d function plots a set of 2D vectors as dots on a Cartesian plane. It can handle two different
     input formats and provides options to save the plot as an image file or display it on the screen.
@@ -67,7 +67,7 @@ def plot_dots_2d(G: list, input_type: int, key_save: bool, key_show: bool):
     return
 
 
-def plot_dots_2d_example():
+def plot_dots_example():
 
     F1, X1 = line_2d(W=[3, -1], input_type=0, a=-5, b=5, n=50)
     F2, X2 = line_2d(W=[5, -2], input_type=0, a=-5, b=5, n=50)
@@ -78,6 +78,6 @@ def plot_dots_2d_example():
     Gx = X1 + X2 + X3 + X4 + X5
     Gy = F1 + F2 + F3 + F4 + F5
     G = [Gx, Gy]
-    plot_dots_2d(G, input_type=1, key_save=False, key_show=True)
+    plot_dots(G, input_type=1, key_save=False, key_show=True)
 
     return

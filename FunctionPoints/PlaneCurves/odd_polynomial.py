@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def odd_polynomial_2d(A: list, a: float, b: float, n: int) -> [list, list]:
+def odd_polynomial(A: list, a: float, b: float, n: int) -> [list, list]:
     """
     The odd_polynomial_2d function is designed to generate points on a 2D polynomial curve
     where the exponents of the variable are odd numbers. Supports polynomial curves of any odd degree

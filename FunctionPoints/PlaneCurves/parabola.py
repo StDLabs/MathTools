@@ -1,8 +1,8 @@
 from MathTools.NumMethods.cramers_rule import cramers_rule
-from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_functions_2d
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
 
 
-def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
+def parabola(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
     """
     The function calculates the points of a 2D parabola based on either the provided coefficients or three points
     on the parabola, within the specified range and with the desired number of points
@@ -40,15 +40,15 @@ def parabola_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, 
     return F, X
 
 
-def parabola_2d_example():
+def parabola_example():
 
-    F1, X1 = parabola_2d(W=[1, 2, 3], input_type=0, a=-4, b=3, n=100)
-    F2, X2 = parabola_2d(W=[[8, -4], [-2, 0.5], [4, 2]], input_type=1, a=-4, b=3, n=100)
+    F1, X1 = parabola(W=[1, 2, 3], input_type=0, a=-4, b=3, n=100)
+    F2, X2 = parabola(W=[[8, -4], [-2, 0.5], [4, 2]], input_type=1, a=-4, b=3, n=100)
 
     S = {'F1': {'F': F1, 'X': X1, 'T': 'Dash', 'Label': 'W=[1, 2, 3]', 'Color': 'r', 'Line width': 1},
          'F2': {'F': F2, 'X': X2, 'T': 'Line', 'Label': 'W=[[8, -4], [-2, 0.5], [4, 2]', 'Color': 'b', 'Line width': 1.2},
          'F3': {'F': [8, -2, 4], 'X': [-4, 0.5, 2], 'T': 'Dots', 'Label': '[8, -4], [-2, 0.5], [4, 2]', 'Color': 'k', 'Line width': 1.5}}
     W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
-    plot_sets_of_functions_2d(W, False, True, False, 13)
+    plot_sets_of_functions(W, False, True, False, 13)
 
     return

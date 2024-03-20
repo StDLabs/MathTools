@@ -1,10 +1,10 @@
 import numpy as np
 import math as m
-from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_functions_2d
-from MathTools.Functions.line_2d import line_2d
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
+from MathTools.FunctionPoints.PlaneCurves.line_2d import line_2d
 
 
-def ln_2d(W: list, a: float, b: float, n: int) -> [list, list]:
+def logarithm_nat(W: list, a: float, b: float, n: int) -> [list, list]:
     """
     The ln_2d function is designed to generate points on a 2D natural logarithmic curve based on the provided parameters
 
@@ -24,14 +24,14 @@ def ln_2d(W: list, a: float, b: float, n: int) -> [list, list]:
     return F, X
 
 
-def ln_2d_example():
+def logarithm_nat_example():
 
-    F1, X1 = ln_2d(W=[1, 2, 1], a=-0.75, b=3, n=100)
+    F1, X1 = logarithm_nat(W=[1, 2, 1], a=-0.75, b=3, n=100)
     F2, X2 = line_2d(W=['y', -1], input_type=2, a=-2, b=4, n=50)
 
     S = {'F1': {'F': F1, 'X': X1, 'T': 'Dash', 'Label': 'W=[1, 2, 1]', 'Color': 'r', 'Line width': 1},
          'F2': {'F': F2, 'X': X2, 'T': 'Line', 'Label': 'W=[y, -1] asymptote', 'Color': 'b', 'Line width': 1}}
     W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
-    plot_sets_of_functions_2d(W, False, True, False, 13)
+    plot_sets_of_functions(W, False, True, False, 13)
 
     return

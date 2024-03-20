@@ -1,13 +1,13 @@
 import numpy as np
 from MathTools.math_dicts import dict_directions
-from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_functions_2d
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
 
 
 def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
     """
     The purpose of the function is to calculate the line equation based on the provided input parameters
     (W and input_type), and then generate a set of points along that line within the specified boundaries (a and b)
-    with the desired number of points (n). [Analytical geometry / Functions]
+    with the desired number of points (n). [Analytical geometry / FunctionPoints]
 
     :param W: A list containing the input parameters that define the line
     :param input_type: An integer value that specifies how the line is defined (0, 1, or 2)
@@ -63,6 +63,6 @@ def line_2d_example():
          'F5': {'F': F5, 'X': X5, 'T': 'Line', 'Label': 'W=[y, -3]', 'Color': 'y', 'Line width': 2.2},
          'F6': {'F': [1, -3], 'X': [2, -4], 'T': 'Dots', 'Label': '[1, 2], [-3, -4]', 'Color': 'k', 'Line width': 1.5}}
     W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
-    plot_sets_of_functions_2d(W, False, True, False, 13)
+    plot_sets_of_functions(W, False, True, False, 13)
 
     return

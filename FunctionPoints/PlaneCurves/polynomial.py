@@ -1,8 +1,8 @@
 import numpy as np
-from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_functions_2d
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
 
 
-def polynomial_2d(A: list, a: float, b: float, n: int) -> [list, list]:
+def polynomial(A: list, a: float, b: float, n: int) -> [list, list]:
     """
     The polynomial_2d function is designed to generate points on a 2D polynomial curve based on
     the provided coefficients and boundaries
@@ -40,13 +40,13 @@ def polynomial_2d(A: list, a: float, b: float, n: int) -> [list, list]:
     return F, X
 
 
-def polynomial_2d_example():
+def polynomial_example():
 
     A = [2, -3, -5, 7, -2, 8]
-    F1, X1 = polynomial_2d(A, a=-1, b=1, n=100)
+    F1, X1 = polynomial(A, a=-1, b=1, n=100)
 
     S = {'F1': {'F': F1, 'X': X1, 'T': 'Line', 'Label': 'A = [2, -3, -5, 7, -2, 8]', 'Color': 'r', 'Line width': 1}}
     W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
-    plot_sets_of_functions_2d(W, False, True, False, 13)
+    plot_sets_of_functions(W, False, True, False, 13)
 
     return
