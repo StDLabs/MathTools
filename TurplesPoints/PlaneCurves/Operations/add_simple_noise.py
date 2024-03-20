@@ -1,6 +1,6 @@
 from MathTools.math_dicts import dict_directions
 import copy
-from MathTools.RandomDistribValues.random_variables import random_even_1d_distrib
+from MathTools.RandomDistribValues.Variables.even_distrib import even_distrib
 from MathTools.TurplesPoints.PlaneCurves.polynomial import polynomial
 from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
 
@@ -22,7 +22,7 @@ def add_simple_noise(W: list, axis, d) -> [list, list]:
 
     for i in range(0, len(W[0])):
         FXsi = FX[axis][i]
-        FX[axis][i] = random_even_1d_distrib(FXsi - d, FXsi + d)
+        FX[axis][i] = even_distrib(FXsi - d, FXsi + d)
     F = FX[0]
     X = FX[1]
 

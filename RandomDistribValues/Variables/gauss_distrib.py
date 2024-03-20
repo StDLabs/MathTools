@@ -3,20 +3,7 @@ import math as m
 from scipy import special
 
 
-def random_even_1d_distrib(a: float, b: float) -> float:
-    """
-    Generates a random floating-point number within a specified range with a uniform (even) distribution.
-
-    :param a: left boundary
-    :param b: right boundary
-    :return: random x in [a, b] with even distribution
-    """
-    x = a + (b - a) * random.random()
-
-    return x
-
-
-def random_gauss_1d_distrib(sigma: float, mx: float) -> float:
+def gauss_distrib(sigma: float, mx: float) -> float:
     """
     Generates a random floating-point number following a Gaussian (normal) distribution with specified parameters.
 
