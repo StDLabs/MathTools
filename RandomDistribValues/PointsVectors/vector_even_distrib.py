@@ -2,7 +2,7 @@ from MathTools.RandomDistribValues.PointsVectors.rotation_even_distrib import ro
 import math as m
 
 
-def random_vector_even_distribution(M: list, r: float) -> list:
+def vector_even_distrib(M: list, r: float) -> list:
     """
 
     :param r: length of vector
