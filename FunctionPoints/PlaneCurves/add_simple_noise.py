@@ -1,11 +1,11 @@
 from MathTools.math_dicts import dict_directions
 import copy
 from MathTools.RandomDistribValues.random_variables import random_even_1d_distrib
-from MathTools.Functions.polynomial_2d import polynomial_2d
-from MathTools.PlotVisualize.plot_sets_of_functions_2d import plot_sets_of_functions_2d
+from MathTools.FunctionPoints.PlaneCurves.polynomial import polynomial
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
 
 
-def add_simple_noise_2d(W: list, axis, d) -> [list, list]:
+def add_simple_noise(W: list, axis, d) -> [list, list]:
     """
     The add_simple_noise_2d function is designed to introduce simple noise (random perturbations)
     to a given set of 2D points, where the noise is applied along either the x-axis or the y-axis
@@ -29,15 +29,15 @@ def add_simple_noise_2d(W: list, axis, d) -> [list, list]:
     return F, X
 
 
-def add_simple_noise_2d_example():
+def add_simple_noise_example():
 
     A = [2, -3, -5, 7, -2, 8]
-    F1, X1 = polynomial_2d(A, a=-1, b=1, n=100)
-    F2, X2 = add_simple_noise_2d(W=[F1, X1], axis='y', d=2)
+    F1, X1 = polynomial(A, a=-1, b=1, n=100)
+    F2, X2 = add_simple_noise(W=[F1, X1], axis='y', d=2)
 
     S = {'F1': {'F': F1, 'X': X1, 'T': 'Line', 'Label': 'F(x)', 'Color': 'r', 'Line width': 1},
          'F2': {'F': F2, 'X': X2, 'T': 'Dots', 'Label': 'F(x) + Noise', 'Color': 'b', 'Line width': 1}}
     W = {'W1': {'S': S, 'ttl': 'Title', 'axisX': 'axisX1', 'axisY': 'axisY1'}}
-    plot_sets_of_functions_2d(W, False, True, False, 13)
+    plot_sets_of_functions(W, False, True, False, 13)
 
     return
