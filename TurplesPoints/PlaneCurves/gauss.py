@@ -1,5 +1,5 @@
 import math as m
-from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions_2d import plot_sets_of_functions
 
 
 def gauss(sigma: float, mx: float, a: float, b: float, n: int) -> [list, list]:

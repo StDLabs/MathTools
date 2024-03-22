@@ -1,5 +1,5 @@
 import numpy as np
-from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions_2d import plot_sets_of_functions
 
 
 def polynomial(A: list, a: float, b: float, n: int) -> [list, list]:

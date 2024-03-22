@@ -1,5 +1,5 @@
 from MathTools.NumMethods.cramers_rule import cramers_rule
-from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions_2d import plot_sets_of_functions
 
 
 def parabola(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:

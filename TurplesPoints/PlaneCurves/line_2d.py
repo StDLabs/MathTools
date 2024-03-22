@@ -1,6 +1,6 @@
 import numpy as np
 from MathTools.math_dicts import dict_directions
-from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions import plot_sets_of_functions
+from MathTools.PlotVisualize.PlaneMapping.plot_sets_of_functions_2d import plot_sets_of_functions
 
 
 def line_2d(W: list, input_type: int, a: float, b: float, n: int) -> [list, list]:
