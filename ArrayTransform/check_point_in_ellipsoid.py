@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def whether_point_within_ellipsoid(R: list, L: list) -> bool:
+def check_point_in_ellipsoid(R: list, L: list) -> bool:
     """
 
     :param R: R = [x, y, z] - some point
@@ -11,6 +11,6 @@ def whether_point_within_ellipsoid(R: list, L: list) -> bool:
 
     key = (np.array([(R[j] / L[j]) ** 2 for j in range(0, 3)])).sum() <= 1
     if key:
-        print('whether_point_within_ellipsoid - False')
+        print('check_point_in_ellipsoid - False')
 
     return key
