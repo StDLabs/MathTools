@@ -1,10 +1,12 @@
 import numpy as np
 
+
 def direction_cosines(A) -> list:
     """
 
-    :param A: A = [x, y, z] or A = [x_ini, y_ini, z_ini, x, y, z]
-    :return: d_cosines = [cos_1, cos_2, cos_3]
+    :param A: A = [Ax, Ay, Az] - 3D vector
+              or A = [x, y, z, Ax, Ay, Az] - 3D vector in an observation point
+    :return: d_cosines = [cos1, cos2, cos3] - direction cosines for vector A = [Ax, Ay, Az]
     """
 
     if len(A) == 6:
