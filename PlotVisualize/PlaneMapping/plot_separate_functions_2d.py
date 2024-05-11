@@ -1,7 +1,7 @@
 import datetime
 import matplotlib.pyplot as plt
 from MathTools.log_files import check_log_folder
-from MathTools.ArrayTransform.restructure_set_of_functions import restructure_set_of_functions
+from MathTools.ArrayTransform.Restructuring.restructure_set_of_functions import restructure_set_of_functions
 from MathTools.PointGenerators.PlaneCurves.line_2d import line_2d
 
 

@@ -1,6 +1,6 @@
 import datetime
 from MathTools.log_files import check_log_folder
-from MathTools.ArrayTransform.transpose_vector_field import transpose_vector_field
+from MathTools.ArrayTransform.Restructuring.transpose_vector_field import transpose_vector_field
 import numpy as np
 import copy
 import matplotlib.pyplot as plt
