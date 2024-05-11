@@ -1,5 +1,5 @@
 import numpy as np
-from MathTools.ArrayTransform.rotate_simple_2d_vector import rotate_simple_2d_vector
+from MathTools.ArrayTransform.Rotations.rotate_simple_2d_vector import rotate_simple_2d_vector
 
 
 def rotate_2d_vector(R0: list, phi: float, rotate_ini: bool, relative: bool) -> list:

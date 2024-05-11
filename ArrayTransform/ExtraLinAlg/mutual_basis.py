@@ -1,4 +1,4 @@
-from MathTools.ArrayTransform.scalar_triple_product import scalar_triple_product
+from MathTools.ArrayTransform.ExtraLinAlg.scalar_triple_product import scalar_triple_product
 import numpy as np
 from MathTools.SetsSeriesSequences.alternating_series_for_number import alternating_series_for_number
 from MathTools.SetsSeriesSequences.remove_number import remove_number

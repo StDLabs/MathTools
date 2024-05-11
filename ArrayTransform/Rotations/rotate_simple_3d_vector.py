@@ -1,5 +1,5 @@
 import numpy as np
-from MathTools.ArrayTransform.matrix_of_rotation_3d import matrix_of_rotation_3d
+from MathTools.ArrayTransform.Rotations.matrix_of_rotation_3d import matrix_of_rotation_3d
 
 
 def rotate_simple_3d_vector(R0: list, phi: float, axis, r: list) -> list:
