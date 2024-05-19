@@ -4,7 +4,7 @@ from MathTools.ArrayTransform.Restructuring.transpose_vector_field import transp
 import copy
 import matplotlib.pyplot as plt
 import numpy as np
-from MathTools.PointGenerators.PlaneCurves.line_2d import line_2d
+from MathTools.PointGenerators.PlaneCurves.Cartesian.line_2d import line_2d
 
 
 def plot_dots(G: list, input_type: int, key_save: bool, key_show: bool):

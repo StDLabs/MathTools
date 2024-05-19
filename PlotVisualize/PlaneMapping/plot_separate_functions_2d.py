@@ -2,7 +2,7 @@ import datetime
 import matplotlib.pyplot as plt
 from MathTools.log_files import check_log_folder
 from MathTools.ArrayTransform.Restructuring.restructure_set_of_functions import restructure_set_of_functions
-from MathTools.PointGenerators.PlaneCurves.line_2d import line_2d
+from MathTools.PointGenerators.PlaneCurves.Cartesian.line_2d import line_2d
 
 
 def plot_separate_functions(M: list, ttl: list, input_type: int, key_save: bool, key_show: bool):
