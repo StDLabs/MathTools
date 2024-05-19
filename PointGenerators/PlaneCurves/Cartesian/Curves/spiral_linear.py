@@ -5,6 +5,14 @@ from MathTools.PlotVisualize.PlaneMapping.plot_dots_2d import plot_dots
 
 
 def spiral_linear(R0, Rn, N, angle):
+    """
+
+    :param R0: initial radius (zero initial radius returns error)
+    :param Rn: final radius
+    :param N: number of points
+    :param angle: whole angle of rotation
+    :return:
+    """
 
     A = [R0, 0]
     G = [A]
