@@ -1,31 +1,31 @@
 import math as m
+import numpy as np
 from MathTools.ArrayTransform.Rotations.rotate_2d_vector import rotate_2d_vector
 from MathTools.PlotVisualize.PlaneMapping.plot_dots_2d import plot_dots
 
 
-def circle(R, N):
-    """
+def spiral_linear(R0, Rn, N, angle):
 
-    :param R: R - circle radius
-    :param N: N - number of points of the whole circle (even distribution)
-    :return: G = [R0, R1, ... ], Ri = [Rix, Riy] - points of the circle
-    """
-
-    A = [R, 0]
+    A = [R0, 0]
     G = [A]
-    phi = 2 * m.pi / N
+    phi = angle / N
+    h = (Rn - R0) / N
     for i in range(0, N):
         Ar = rotate_2d_vector(G[i], phi, False, True)
+        An = np.linalg.norm([Ar[0], Ar[1]])
+        Ar = [Ar[0] * (1 + h / An), Ar[1] * (1 + h / An)]
         G.append(Ar)
 
     return G
 
 
-def circle_example():
+def spiral_linear_example():
 
-    R = 2
-    N = 50
-    G = circle(R, N)
+    R0 = 0.005
+    Rn = 2
+    N = 500
+    angle = 10 * m.pi
+    G = spiral_linear(R0, Rn, N, angle)
     plot_dots(G, input_type=0, key_save=False, key_show=True)
 
     return
