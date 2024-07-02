@@ -3,7 +3,7 @@ from MathTools.PointGenerators.SpatialFields.Central.point_charges_field_calc im
 import numpy as np
 
 
-def point_charge_scalar_section(Pl, P, Npl, G, Q, A, function):
+def scalar_field_section(Pl, P, Npl, G, Q, A, function):
     """
 
     :param Pl: Pl = [A, B, C, D] - parameters of a plane Ax+By+Cz+D=0 in space
@@ -19,14 +19,9 @@ def point_charge_scalar_section(Pl, P, Npl, G, Q, A, function):
     plane_info = plane_type(Pl)
     if plane_info[2] == 2:
         s = plane_info[1][0]
-        if s == 2:
-            i2 = plane_info[0][0]
-            i1 = plane_info[0][1]
-            z = 0
-        else:
-            i1 = plane_info[0][0]
-            i2 = plane_info[0][1]
-            z = 1
+        i1 = plane_info[3][0]
+        i2 = plane_info[3][1]
+        z = plane_info[3][2]
         U = -Pl[3] / Pl[s]
         h = [2 * P[i1] / Npl[1 - z], 2 * P[i2] / Npl[z]]
         M1 = [-P[i1] + j * h[0] for j in range(0, Npl[1 - z] + 1)]
@@ -43,4 +38,4 @@ def point_charge_scalar_section(Pl, P, Npl, G, Q, A, function):
     else:
         print('point_charge_scalar_section: unsupported type of the plane Ax+By+Cz+D')
 
-    return GF
+    return M1, M2, F
