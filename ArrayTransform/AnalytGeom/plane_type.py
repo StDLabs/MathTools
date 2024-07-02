@@ -1,6 +1,15 @@
 
 
 def plane_type(P):
+    """
+    A, B, C, D can be zero parameters. Function returns positions of zero parameters K1,
+    positions of non-zero parameters K2, and the type of plane T:
+    T = 0 (no zero parameters), T = 1 (one zero parameter), or 2 (two zero parameters)
+
+    :param P: P = [A, B, C, D] - parameters of a plane Ax+By+Cz+D=0 in space
+    :return: S = [K1, K2, T]
+    """
+
     type = 0
     i = 0
     K1 = []
