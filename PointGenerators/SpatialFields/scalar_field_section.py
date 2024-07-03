@@ -7,7 +7,9 @@ def scalar_field_section(Pl, P, Npl, G, Q, A, function):
     """
     Description
         This function calculates the scalar field values on a 2D rectangular grid section
-        defined by a plane in 3D space, produced by a source (for example, by a set of point charges).
+        defined by a plane in 3D space, produced by sources connected to a set of points
+        (for example, by a set of point charges).
+
         It supports calculations only for horizontal and vertical planes. Constructs a 2D grid based on user-defined
         nodal points and the area of interest. Evaluates the effect of point charges on the grid points using
         a user-defined field-producing function (for example classical Coulomb's field).
