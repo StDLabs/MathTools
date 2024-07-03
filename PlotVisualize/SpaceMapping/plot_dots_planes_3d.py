@@ -1,19 +1,25 @@
 import datetime
 from MathTools.log_files import check_log_folder
 from MathTools.ArrayTransform.Restructuring.transpose_vector_field import transpose_vector_field
+from MathTools.ArrayTransform.AnalytGeom.plane_type import plane_type
+from MathTools.PointGenerators.PeriodStruct.periodic_structure_cartesian_points_3d import periodic_structure_cartesian_points_3d
 import matplotlib.pyplot as plt
 import numpy as np
 
 
-def plot_dots_3d(G: list, input_type, key_save, key_show):
+def plot_dots_planes_3d(G: list, PL: list, input_type, planes_key, key_save, key_show):
     """
     Description
+        This function creates a 3D plot that visualizes a set of points (dots) and planes in a 3D space
+
         input_type = 0 means G = [R0, R1, ...] - set of vectors Ri = [Rix, Riy, Riz].
 
         input_type = 1 means G = [Gx, Gy, Gz], Gx = [R1x, R2x, ... ], Gy = [R1y, R2y, ...], Gz = [R1y, R2y, ...].
 
     :param G: set of 3d vectors
+    :param PL: PL = [Pl1, Pl2, ..., Pli], Pli = [Ai, Bi, Ci, Di] - set of planes (any)
     :param input_type: input_type = 0, 1 (see description)
+    :param planes_key: planes_key = True means Pl contains at least one plane necessary for drawing
     :param key_save: True/False - whether save or not
     :param key_show: True/False - whether show or not
     :return:
@@ -46,6 +52,27 @@ def plot_dots_3d(G: list, input_type, key_save, key_show):
 
     for i in range(0, len(G[0])):
         plt.plot(G[0][i], G[1][i], G[2][i], 'ko')
+
+    if planes_key:
+        for i in range(0, len(PL)):
+            plane_info = plane_type(PL[i])
+            if plane_info[2] == 2:
+                s = plane_info[1][0]
+                i1 = plane_info[3][0]
+                i2 = plane_info[3][1]
+                U = -PL[i][3] / PL[i][s]
+                K = np.arange(-5, 5, 0.25)
+                F = [0, 0, 0]
+                F[i1], F[i2] = np.meshgrid(K, K)
+                F[s] = (F[i1]**0 - F[i1]**0) + (F[i2]**0 - F[i2]**0) + U
+                ax.plot_surface(F[0], F[1], F[2], alpha=0.5)
+            else:
+                X = np.arange(-5, 5, 0.25)
+                Y = np.arange(-5, 5, 0.25)
+                X, Y = np.meshgrid(X, Y)
+                Z = -(PL[i][3] + PL[i][0] * X + PL[i][1] * Y) / PL[i][2]
+                ax.plot_surface(X, Y, Z, alpha=0.5)
+
     ax.set_xlim(Smin, Smax)
     ax.set_ylim(Smin, Smax)
     ax.set_zlim(Smin, Smax)
@@ -58,5 +85,22 @@ def plot_dots_3d(G: list, input_type, key_save, key_show):
         plt.savefig(
             'Data/Chapter ' + str(now.year) + '.' + str(now.month) + '.' + str(now.day) + '/' + str(N) + '.' + str(
                 P + 1) + '.png')
+
+    return
+
+
+def plot_dots_planes_3d_example():
+
+    H = [3, 3, 1]
+    D = [0, 0, 0, 0, 0, 0]
+    T = [5, 5, 5]
+    Sh = [0, 0, 0]
+
+    PL = [[1, 0, 0, -1], [0, 1, 0, -1], [0, 0, 1, -1], [1, 1, 1, 0]]
+    P = [10, 10, 10]
+
+    G = periodic_structure_cartesian_points_3d(H, D, T, True, Sh)
+
+    plot_dots_planes_3d(G, PL, input_type=0, planes_key=True, key_save=False, key_show=True)
 
     return

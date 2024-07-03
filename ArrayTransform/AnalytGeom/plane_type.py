@@ -38,6 +38,6 @@ def plane_type(Pl):
             i2 = S[0][1]
             z = 1
 
-    S.append([i1, i2, z])
+        S.append([i1, i2, z])
 
     return S
