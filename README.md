@@ -5,6 +5,9 @@ in **Python-based** scientific computing and helps in solving variety of problem
 # Table of content
 
 * [Modular programming: why I use it?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#modular-programming-why-i-use-it)
+* [How I designed my library?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#how-i-designed-my-library)
+* [Overview by sections](https://github.com/StDLabs/MathTools?tab=readme-ov-file#overview-by-sections)
+  * [ArrayTransform](https://github.com/StDLabs/MathTools?tab=readme-ov-file#arraytransform)
 
 # Modular programming: why I use it?
 
@@ -37,14 +40,14 @@ helps current projects, and is undergoing continuous development.
 - All tools are structured into several general topics which may also have their own **system of categories**.
   The whole tree of topics can be found below with their own descriptions.
 - Each module has **similar code structure** and includes **short description**, sometimes with **references** or **additional info**.
-- Additionally, some of the modules also have **examples** of how they can be used as separate functions which provide good **templates**
+- Additionally, some modules also have **examples** of how they can be used as separate functions which provide good **templates**
   and allow quick testing.
 
 # Overview by sections
 
 ### ArrayTransform
 
-Involves tools for **manipulating vectors**, **sets of vectors**, and related **discrete mathematical objects**
+Involve tools for **manipulating vectors**, **sets of vectors**, and related **discrete mathematical objects**
 (functions, curves, surfaces, fields, etc.), relying primarily on rules and operations in **linear algebra**,
 **analytical geometry** and **vector field theory.**
 
