@@ -4,7 +4,7 @@ in **Python-based** scientific computing and helps in solving variety of problem
 
 # Table of content
 
-* [Modular programming: why I use it?](#Modular programming: why I use it?)
+* [Modular programming: why I use it?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#modular-programming-why-i-use-it)
 
 # Modular programming: why I use it?
 
