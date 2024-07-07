@@ -2,6 +2,10 @@ Hello! This is my library of **mathematical** and **numerical tools** for **scie
 and teaching activities in **computational physics**. The library represents the foundation for using **modular programming technique**
 in **Python-based** scientific computing and helps in solving variety of problems connected with mathematical modeling and simulation
 
+# Table of content
+
+* [Modular programming: why I use it?](#Modular programming: why I use it?)
+
 # Modular programming: why I use it?
 
 [Modular programming](https://en.wikipedia.org/wiki/Modular_programming) is an extremely helpful technique that helps to breake down
