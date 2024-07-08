@@ -13,6 +13,7 @@ in **Python-based** scientific computing and helps in solving variety of problem
   * [PointGenerators](https://github.com/StDLabs/MathTools?tab=readme-ov-file#pointgenerators)
   * [RandomDistribValues](https://github.com/StDLabs/MathTools?tab=readme-ov-file#randomdistribvalues)
   * [SetsSeriesSequences](https://github.com/StDLabs/MathTools?tab=readme-ov-file#setsseriessequences)
+* [Examples and expositions](https://github.com/StDLabs/MathTools?tab=readme-ov-file#examples-and-expositions) 
 
 # Modular programming: why I use it?
 
@@ -108,4 +109,4 @@ For example:
 
 Numerical sequence generators and related tools
 
-# Expositions and examples
+# Examples and expositions
