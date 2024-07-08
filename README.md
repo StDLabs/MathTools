@@ -35,6 +35,8 @@ any large program into smaller modules or subprograms, saving time and effort wh
 
 # How I designed my library?
 
+<img align="right" src="https://github.com/StDLabs/MathTools/blob/main/ImgGifs/Graph2.png" width="40%"/>
+
 Following listed modular programming benefits I designed my library as a **systematized set of functions, algorithms,**
 and **other utilities** that are sorted according to their **main purposes**. The library does not intend to cover the whole
 variety of functions and methods in scientific computing or its particular branch; instead, it takes a more personalized approach,
