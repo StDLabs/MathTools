@@ -56,7 +56,7 @@ helps current projects, and is undergoing continuous development.
 # Overview by sections
 
 <details><summary><b>ArrayTransform</b></summary>
-
+<br>
 Involve tools for **manipulating vectors**, **sets of vectors**, and related **discrete mathematical objects**
 (grid functions, curves, surfaces, fields, etc.), relying primarily on rules and operations in **linear algebra**,
 **analytical geometry** and **vector field theory.**
