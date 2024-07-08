@@ -2,12 +2,17 @@ Hello! This is my library of **mathematical** and **numerical tools** for **scie
 and teaching activities in **computational physics**. The library represents the foundation for using **modular programming technique**
 in **Python-based** scientific computing and helps in solving variety of problems connected with mathematical modeling and simulation
 
-# Table of content
+# Table of contents
 
 * [Modular programming: why I use it?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#modular-programming-why-i-use-it)
 * [How I designed my library?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#how-i-designed-my-library)
 * [Overview by sections](https://github.com/StDLabs/MathTools?tab=readme-ov-file#overview-by-sections)
   * [ArrayTransform](https://github.com/StDLabs/MathTools?tab=readme-ov-file#arraytransform)
+  * [PlotVisualize](https://github.com/StDLabs/MathTools?tab=readme-ov-file#plotvisualize)
+  * [NumMethods](https://github.com/StDLabs/MathTools?tab=readme-ov-file#nummethods)
+  * [PointGenerators](https://github.com/StDLabs/MathTools?tab=readme-ov-file#pointgenerators)
+  * [RandomDistribValues](https://github.com/StDLabs/MathTools?tab=readme-ov-file#randomdistribvalues)
+  * [SetsSeriesSequences](https://github.com/StDLabs/MathTools?tab=readme-ov-file#setsseriessequences)
 
 # Modular programming: why I use it?
 
@@ -16,7 +21,7 @@ any large program into smaller modules or subprograms, saving time and effort wh
 
 - **Focuses on reusability** - every existing module can be used multiple times in future projects.
   Even if you create a new module, you can be confident that it will likely be reused again in other projects.
-  So, it **helps avoiding redundant work** and **promoting code consistency** across different applications.
+  So, it **helps to avoid redundant work** and **promote code consistency** across different applications.
 - **Helps maintainability** and **flexibility.** By separating concerns into distinct modules, it becomes easier to maintain,
   debug, and update specific parts of the code without affecting the entire program.
 - **Facilitates collaboration** and **organization** among developers or researchers, helps in **leading** and
@@ -48,16 +53,15 @@ helps current projects, and is undergoing continuous development.
 ### ArrayTransform
 
 Involve tools for **manipulating vectors**, **sets of vectors**, and related **discrete mathematical objects**
-(functions, curves, surfaces, fields, etc.), relying primarily on rules and operations in **linear algebra**,
+(grid functions, curves, surfaces, fields, etc.), relying primarily on rules and operations in **linear algebra**,
 **analytical geometry** and **vector field theory.**
 
 For example, modules in this section include:
 
-- Basic transformations of coordinate systems for sets of points in geometrical spaces such as rotations, translations,
-  compression and expansion, images
+- Basic transformations for coordinate systems and connected objects in geometrical spaces such as rotations,
+translations, compressions and expansions, images
+- Alternatives or extensions for general linear algebra operations, functions and scripts based on linear algebra
 - Transition to curvilinear coordinates, work in curvilinear coordinates
-- Alternatives or extensions for general linear algebra operations
-- Generators of discrete periodic mathematical and geometric structures
 
 ### PlotVisualize
 
@@ -66,11 +70,8 @@ and especially during the final **demonstration**. Practically, the task of visu
 due to the variety of mathematical objects and its computer representations that must be shown. This section contains
 different tools for **plotting** and **visualizing** for different kinds of objects.
 
-For example: 
-
-- Two-dimentional sets of functions and curves, sets of points
-- Three-dimentional objects such as sets of points, curves, surfaces
-- Sets of vectors, vector and scalar fields
+This section structured into plane and space mappings that contain different tools for plotting and visualizing for
+different kinds of objects (sets of dots, functions, surfaces, scalar and vector fields).
 
 ### NumMethods
 
@@ -88,8 +89,10 @@ For example:
 
 It is common for scientific modeling tasks to involve functions, **geometric structures** and related mathematical objects that
 can be represented as sets of points in space placed according to a rule. Objects such as curves and surfaces can be considered
-to be this rule as well as any kind of periodic structures such as lattices. This section involves algorithms that generate
-**ordered collections of points in a space** according to mentioned rules and taking several input parameters
+to be this rule as well as any kind of periodic structures such as lattices. 
+
+This section involves algorithms that generate **ordered collections of points in space** according to mentioned rules
+and taking different input parameters or sets of parameters
 
 ### RandomDistribValues
 
