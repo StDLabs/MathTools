@@ -17,6 +17,8 @@ in **Python-based** scientific computing and helps in solving variety of problem
 
 # Modular programming: why I use it?
 
+<img src="https://github.com/StDLabs/MathTools/blob/main/ImgGifs/ModularProgramming2.png" width="100%"/>
+
 [Modular programming](https://en.wikipedia.org/wiki/Modular_programming) is an extremely helpful technique that helps to breake down
 any large program into smaller modules or subprograms, saving time and effort when developing new scientific applications.
 
