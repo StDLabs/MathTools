@@ -35,7 +35,7 @@ any large program into smaller modules or subprograms, saving time and effort wh
 
 # How I designed my library?
 
-<img align="right" src="https://github.com/StDLabs/MathTools/blob/main/ImgGifs/Graph2.jpg" width="40%"/>
+<img align="right" src="https://github.com/StDLabs/MathTools/blob/main/ImgGifs/Graph2.jpg" width="30%"/>
 
 Following listed modular programming benefits I designed my library as a **systematized set of functions, algorithms,**
 and **other utilities** that are sorted according to their **main purposes**. The library does not intend to cover the whole
@@ -55,7 +55,7 @@ helps current projects, and is undergoing continuous development.
 
 # Overview by sections
 
-### ArrayTransform
+<details><summary><b>ArrayTransform</b></summary>
 
 Involve tools for **manipulating vectors**, **sets of vectors**, and related **discrete mathematical objects**
 (grid functions, curves, surfaces, fields, etc.), relying primarily on rules and operations in **linear algebra**,
@@ -67,6 +67,8 @@ For example, modules in this section include:
 translations, compressions and expansions, images
 - Alternatives or extensions for general linear algebra operations, functions and scripts based on linear algebra
 - Transition to curvilinear coordinates, work in curvilinear coordinates
+
+</details>
 
 ### PlotVisualize
 
