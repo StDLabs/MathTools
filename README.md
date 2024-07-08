@@ -7,13 +7,13 @@ in **Python-based** scientific computing and helps in solving variety of problem
 * [Modular programming: why I use it?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#modular-programming-why-i-use-it)
 * [How I designed my library?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#how-i-designed-my-library)
 * [Overview by sections](https://github.com/StDLabs/MathTools?tab=readme-ov-file#overview-by-sections)
+* [Examples and expositions](https://github.com/StDLabs/MathTools?tab=readme-ov-file#examples-and-expositions) 
   * [ArrayTransform](https://github.com/StDLabs/MathTools?tab=readme-ov-file#arraytransform)
   * [PlotVisualize](https://github.com/StDLabs/MathTools?tab=readme-ov-file#plotvisualize)
   * [NumMethods](https://github.com/StDLabs/MathTools?tab=readme-ov-file#nummethods)
   * [PointGenerators](https://github.com/StDLabs/MathTools?tab=readme-ov-file#pointgenerators)
   * [RandomDistribValues](https://github.com/StDLabs/MathTools?tab=readme-ov-file#randomdistribvalues)
   * [SetsSeriesSequences](https://github.com/StDLabs/MathTools?tab=readme-ov-file#setsseriessequences)
-* [Examples and expositions](https://github.com/StDLabs/MathTools?tab=readme-ov-file#examples-and-expositions) 
 
 # Modular programming: why I use it?
 
@@ -53,10 +53,12 @@ helps current projects, and is undergoing continuous development.
 - Additionally, some modules also have **examples** of how they can be used as separate functions which provide good **templates**
   and allow quick testing.
 
+# Examples and expositions
+
 # Overview by sections
 
 <details><summary><b>ArrayTransform</b></summary>
-<br>
+
 Involve tools for **manipulating vectors**, **sets of vectors**, and related **discrete mathematical objects**
 (grid functions, curves, surfaces, fields, etc.), relying primarily on rules and operations in **linear algebra**,
 **analytical geometry** and **vector field theory.**
@@ -70,7 +72,7 @@ translations, compressions and expansions, images
 
 </details>
 
-### PlotVisualize
+<details><summary><b>PlotVisualize</b></summary>
 
 The majority of scientific computing problems require good **visualization** during the entire development and programming process,
 and especially during the final **demonstration**. Practically, the task of visualizing is highly complicated
@@ -80,7 +82,9 @@ different tools for **plotting** and **visualizing** for different kinds of obje
 This section structured into plane and space mappings that contain different tools for plotting and visualizing for
 different kinds of objects (sets of dots, functions, surfaces, scalar and vector fields).
 
-### NumMethods
+</details>
+
+<details><summary><b>NumMethods</b></summary>
 
 Contains wide range of **numerical** and **statistical algorithms** and related computing tools.
 
@@ -92,7 +96,9 @@ For example:
 - Solving problems for partial differential equations
 - Regression algorithms
 
-### PointGenerators
+</details>
+
+<details><summary><b>PointGenerators</b></summary>
 
 It is common for scientific modeling tasks to involve functions, **geometric structures** and related mathematical objects that
 can be represented as sets of points in space placed according to a rule. Objects such as curves and surfaces can be considered
@@ -101,7 +107,9 @@ to be this rule as well as any kind of periodic structures such as lattices.
 This section involves algorithms that generate **ordered collections of points in space** according to mentioned rules
 and taking different input parameters or sets of parameters
 
-### RandomDistribValues
+</details>
+
+<details><summary><b>RandomDistribValues</b></summary>
 
 Contains tools connected with random values and probability distributions
 
@@ -111,8 +119,10 @@ For example:
 - Vector generators (random directions or lengths), random rotations and coordinate systems
 - Operations on other mathematical objects which are connected with random values and distributions such as adding noises and distortions
 
-### SetsSeriesSequences
+</details>
+
+<details><summary><b>SetsSeriesSequences</b></summary>
 
 Numerical sequence generators and related tools
 
-# Examples and expositions
+</details>
