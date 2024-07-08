@@ -107,3 +107,5 @@ For example:
 ### SetsSeriesSequences
 
 Numerical sequence generators and related tools
+
+# Expositions and examples
