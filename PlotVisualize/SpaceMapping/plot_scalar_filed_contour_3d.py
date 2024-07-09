@@ -1,4 +1,4 @@
-from MathTools.PointGenerators.SpatialFields.scalar_field_3d import scalar_field_3d
+from MathTools.PointGenerators.SpatialFields.field_3d import field_3d
 from MathTools.PointGenerators.PeriodStruct.periodic_structure_cartesian_points_3d import periodic_structure_cartesian_points_3d
 import numpy as np
 from mayavi.mlab import *
@@ -50,7 +50,8 @@ def plot_scalar_filed_contour_3d_example():
     N3d = [30, 30, 30]
     A = [1, 1, 0.5, 0]
     function = 'hyperbola'
-    M, MQ = scalar_field_3d(P, N3d, G, Q, A, function)
+    option = 'scalar'
+    M, MQ = field_3d(P, N3d, G, Q, A, function, option)
     LN = 20
     Title = 'Name'
     plot_scalar_filed_contour_3d(P, MQ, LN, Title)

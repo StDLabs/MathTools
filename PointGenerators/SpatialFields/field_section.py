@@ -3,10 +3,10 @@ from MathTools.PointGenerators.SpatialFields.Central.point_charges_field_calc im
 import numpy as np
 
 
-def scalar_field_section(Pl, P, Npl, G, Q, A, function):
+def field_section(Pl, P, Npl, G, Q, A, function, option):
     """
     Description
-        This function calculates the scalar field values on a 2D rectangular grid section
+        This function calculates the scalar/vector field values on a 2D rectangular grid section
         defined by a plane in 3D space, produced by sources connected to a set of points
         (for example, by a set of point charges).
 
@@ -22,12 +22,13 @@ def scalar_field_section(Pl, P, Npl, G, Q, A, function):
     :param Q: Q = [Q0, Q1, Q2, ...], Qi - magnitudes point charges
     :param A: A = [A0, A1, A2, ...] - a list of all parameters needed for chosen type of the field producing function
     :param function: name of supported function (see point_charges_field_calc)
+    :param option: choice of 'scalar' or 'vector' filed
     :return: M1, M2, F
         M1 - the x-coordinates (or y, z depending on the plane orientation) of the 2D grid points along
         the first dimension
         M2 - the y-coordinates (or x, z depending on the plane orientation) of the 2D grid points along
         the second dimension.
-        F - A 2D array representing the scalar field values at the grid points defined by M1 and M2.
+        F - A 2D array representing the scalar/vector field values at the grid points defined by M1 and M2.
     """
 
     plane_info = plane_type(Pl)
@@ -47,7 +48,7 @@ def scalar_field_section(Pl, P, Npl, G, Q, A, function):
             for q in range(0, Npl[z] + 1):
                 M[i1] = M1[j]
                 M[i2] = M2[q]
-                F[q][j] = point_charges_field_calc(G, Q, M, A, function)
+                F[q][j] = point_charges_field_calc(G, Q, M, A, function, option)
     else:
         print('point_charge_scalar_section: unsupported type of the plane Ax+By+Cz+D')
 

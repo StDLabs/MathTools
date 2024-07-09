@@ -1,7 +1,7 @@
 from MathTools.ArrayTransform.AnalytGeom.plane_type import plane_type
 from MathTools.log_files import check_log_folder
 from MathTools.PointGenerators.PeriodStruct.periodic_structure_cartesian_points_3d import periodic_structure_cartesian_points_3d
-from MathTools.PointGenerators.SpatialFields.scalar_field_section import scalar_field_section
+from MathTools.PointGenerators.SpatialFields.field_section import field_section
 import matplotlib.pyplot as plt
 import datetime
 
@@ -85,8 +85,9 @@ def plot_scalar_field_contour_map_example():
 
     A = [1, 1, 0.5, 0]
     function = 'hyperbola'
+    option = 'scalar'
 
-    M1, M2, F = scalar_field_section(Pl, P, Npl, G, Q, A, function)
+    M1, M2, F = field_section(Pl, P, Npl, G, Q, A, function, option)
     LN = 50
     Title = 'Name'
     Save = False
