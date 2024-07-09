@@ -43,7 +43,7 @@ def field_section(Pl, P, Npl, G, Q, A, function, option):
         M2 = [-P[i2] + q * h[1] for q in range(0, Npl[z] + 1)]
         M = [0, 0, 0]
         M[s] = U
-        F = np.zeros((Npl[z] + 1, Npl[1 - z] + 1))
+        F = np.zeros((Npl[z] + 1, Npl[1 - z] + 1)).tolist()
         for j in range(0, Npl[1 - z] + 1):
             for q in range(0, Npl[z] + 1):
                 M[i1] = M1[j]
