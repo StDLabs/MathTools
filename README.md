@@ -6,14 +6,8 @@ in **Python-based** scientific computing and helps in solving variety of problem
 
 * [Modular programming: why I use it?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#modular-programming-why-i-use-it)
 * [How I designed my library?](https://github.com/StDLabs/MathTools?tab=readme-ov-file#how-i-designed-my-library)
-* [Overview by sections](https://github.com/StDLabs/MathTools?tab=readme-ov-file#overview-by-sections)
 * [Examples and expositions](https://github.com/StDLabs/MathTools?tab=readme-ov-file#examples-and-expositions) 
-  * [ArrayTransform](https://github.com/StDLabs/MathTools?tab=readme-ov-file#arraytransform)
-  * [PlotVisualize](https://github.com/StDLabs/MathTools?tab=readme-ov-file#plotvisualize)
-  * [NumMethods](https://github.com/StDLabs/MathTools?tab=readme-ov-file#nummethods)
-  * [PointGenerators](https://github.com/StDLabs/MathTools?tab=readme-ov-file#pointgenerators)
-  * [RandomDistribValues](https://github.com/StDLabs/MathTools?tab=readme-ov-file#randomdistribvalues)
-  * [SetsSeriesSequences](https://github.com/StDLabs/MathTools?tab=readme-ov-file#setsseriessequences)
+* [Overview by sections](https://github.com/StDLabs/MathTools?tab=readme-ov-file#overview-by-sections)
 
 # Modular programming: why I use it?
 

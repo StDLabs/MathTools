@@ -45,7 +45,6 @@ def scalar_field_section(Pl, P, Npl, G, Q, A, function):
         F = np.zeros((Npl[z] + 1, Npl[1 - z] + 1))
         for j in range(0, Npl[1 - z] + 1):
             for q in range(0, Npl[z] + 1):
-                # print(j, q)
                 M[i1] = M1[j]
                 M[i2] = M2[q]
                 F[q][j] = point_charges_field_calc(G, Q, M, A, function)
