@@ -27,5 +27,7 @@ def point_charges_field_calc(G, Q, M, A, function, option):
                 d_cos = np.array(direction_cosines(r_vec.tolist()))
                 Fi = d_cos * Fi
             F[option] += Fi
+    if option == 'vector':
+        F[option].tolist()
 
     return F[option]

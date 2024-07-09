@@ -5,7 +5,7 @@ from MathTools.ArrayTransform.Restructuring.transpose_vector_field import transp
 import numpy as np
 
 
-def plot_vector_field_3d(G: list, input_type: int, relative: bool, key_save: bool, key_show: bool):
+def plot_vector_field_3d_matplotlib(G: list, input_type: int, relative: bool, key_save: bool, key_show: bool):
     """
     Description
         input_type = 0 means G = [R0, R1, ...] - set of vectors, Ri = [Rix, Riy, Riz].
