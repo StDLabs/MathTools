@@ -6,6 +6,18 @@ from mayavi import mlab
 
 
 def plot_scalar_filed_contour_3d(P, MQ, LN, Title):
+    """
+    Description
+        The plot_scalar_filed_contour_3d function generates a 3D contour plot of a scalar field using the Mayavi
+        visualization library. It visualizes isosurfaces based on the provided scalar field data, displays a color bar,
+        and includes axes and a title for reference
+
+    :param P: P = [Px, Py, Pz] - defines the area bounds {{-Px,Px},{-Py,Py},{-Pz,Pz}} for calculations
+    :param MQ: 3D array of scalar field data to be visualized
+    :param LN: Number of contour levels to be drawn
+    :param Title: Title for the color bar
+    :return:
+    """
 
     MQ = np.array(MQ)
     a = [0, 1, 0, P[1] / P[0], 0, P[2] / P[0]]
