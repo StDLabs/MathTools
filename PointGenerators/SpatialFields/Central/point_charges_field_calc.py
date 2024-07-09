@@ -1,8 +1,9 @@
+from MathTools.ArrayTransform.ExtraLinAlg.direction_cosines import direction_cosines
 import math as m
 import numpy as np
 
 
-def point_charges_field_calc(G, Q, M, A, function):
+def point_charges_field_calc(G, Q, M, A, function, type):
     """
 
     :param G: G = [R0, R1, R2, ...], Ri = [Rix, Riy, Riz] - set of points Ri where point charges are located
@@ -12,17 +13,19 @@ def point_charges_field_calc(G, Q, M, A, function):
     :param function: name of supported function:
         1. function = 'hyperbola':
             A = [k, n, Rm, Fm]. Fi(r) = k*Qi/(r^n) if r > Rm; Fi(r) = Fm if r <= Rm
+    :param type: choice of 'scalar' or 'vector' central filed
     :return: F = F(M)
     """
 
-    F = 0
+    F = {'scalar': 0, 'vector': np.array([0, 0, 0])}
     for i in range(0, len(G)):
-        r = m.sqrt(np.array([(G[i][j] - M[j])**2 for j in range(0, 3)]).sum())
+        r_vec = np.array([(M[j] - G[i][j]) for j in range(0, 3)])
+        r = m.sqrt((r_vec ** 2).sum())
         if function == 'hyperbola':
-            if r <= A[2]:
-                Fi = A[3]
-            else:
-                Fi = A[0] * Q[i] / (r ** A[1])
+            Fi = A[3] if r <= A[2] else Fi = A[0] * Q[i] / (r ** A[1])
+            if type == 'vector':
+                d_cos = np.array(direction_cosines(r_vec.tolist()))
+                Fi = d_cos * Fi
             F += Fi
 
     return F
