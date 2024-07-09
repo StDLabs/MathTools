@@ -14,7 +14,7 @@ def scalar_field_3d(P, N3d, G, Q, A, function):
     :param Q: Q = [Q0, Q1, Q2, ...], Qi - magnitudes point charges
     :param A: A = [A0, A1, A2, ...] - a list of all parameters needed for chosen type of the field producing function
     :param function: name of supported function (see point_charges_field_calc)
-    :return:
+    :return: M = [M1, M2, M3] - 3D mesh grid, MQ - 3D array with scalar field magnitudes
     """
 
     h = [2 * P[i] / N3d[i] for i in range(0, 3)]
