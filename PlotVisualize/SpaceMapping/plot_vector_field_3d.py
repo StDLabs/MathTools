@@ -1,6 +1,5 @@
 from MathTools.PointGenerators.PeriodStruct.periodic_structure_cartesian_points_3d import periodic_structure_cartesian_points_3d
 from MathTools.PointGenerators.SpatialFields.field_3d import field_3d
-from mayavi.mlab import *
 from mayavi import mlab
 import numpy as np
 
@@ -22,7 +21,7 @@ def plot_vector_field_3d(P, MQ, title_main, title_bar):
 
 def plot_vector_field_3d_example():
 
-    H = [3, 3, 3]
+    H = [3, 3, 1]
     D = [0, 0, 0, 0, 0, 0]
     T = [5, 5, 5]
     Sh = [0, 0, 0]
