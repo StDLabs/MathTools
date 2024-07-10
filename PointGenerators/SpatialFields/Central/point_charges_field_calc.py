@@ -28,6 +28,6 @@ def point_charges_field_calc(G, Q, M, A, function, option):
                 Fi = d_cos * Fi
             F[option] = F[option] + Fi
     if option == 'vector':
-        F[option].tolist()
+        F[option] = F[option].tolist()
 
     return F[option]

@@ -22,8 +22,8 @@ def field_3d(P, N3d, G, Q, A, function, option):
     M = [0, 0, 0]
     for i in range(0, 3):
         M[i] = [-P[i] + j * h[i] for j in range(0, N3d[i] + 1)]
-    M = np.array(M)
-    MQ = np.zeros((N3d[0] + 1, N3d[1] + 1, N3d[2] + 1))
+    # M = np.array(M)
+    MQ = np.zeros((N3d[0] + 1, N3d[1] + 1, N3d[2] + 1)).tolist()
     for i in range(0, N3d[0] + 1):
         for j in range(0, N3d[1] + 1):
             for q in range(0, N3d[2] + 1):
