@@ -34,7 +34,7 @@ def plot_vector_field_3d_example():
     Q = [1 for i in range(0, len(G))]
 
     P = [10, 10, 10]
-    N3d = [2, 2, 2]
+    N3d = [20, 20, 20]
     A = [1, 1, 0.5, 0]
     function = 'hyperbola'
     option = 'vector'
@@ -42,7 +42,7 @@ def plot_vector_field_3d_example():
     title_main = 'title_main'
     title_bar = 'title_bar'
 
-    print(np.array(MQ))
+    MQ = np.transpose(np.array(MQ), (3, 0, 1, 2)).tolist()
 
     plot_vector_field_3d(P, MQ, title_main, title_bar)
 
