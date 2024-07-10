@@ -5,7 +5,7 @@ from mayavi.mlab import *
 from mayavi import mlab
 
 
-def plot_scalar_filed_contour_3d(P, MQ, LN, Title):
+def plot_scalar_filed_contour_3d(P, MQ, LN, title_main, title_bar):
     """
     Description
         The plot_scalar_filed_contour_3d function generates a 3D contour plot of a scalar field using the Mayavi
@@ -15,7 +15,7 @@ def plot_scalar_filed_contour_3d(P, MQ, LN, Title):
     :param P: P = [Px, Py, Pz] - defines the area bounds {{-Px,Px},{-Py,Py},{-Pz,Pz}} for calculations
     :param MQ: 3D array of scalar field data to be visualized
     :param LN: Number of contour levels to be drawn
-    :param Title: Title for the color bar
+    :param title_bar: Title for the color bar
     :return:
     """
 
@@ -23,9 +23,9 @@ def plot_scalar_filed_contour_3d(P, MQ, LN, Title):
     a = [0, 1, 0, P[1] / P[0], 0, P[2] / P[0]]
     mlab.figure(figure=1, size=(550, 325))
     contour3d(MQ, contours=LN, opacity=0.5, extent=a)
-    mlab.colorbar(title=Title, orientation='vertical')
+    mlab.colorbar(title=title_bar, orientation='vertical')
     mlab.axes(ranges=(-P[0], P[0], -P[1], P[1], -P[2], P[2]))
-    mlab.title('Scalar field isosurfaces', size=0.3, height=0.95)
+    mlab.title(title_main, size=0.3, height=0.95)
     mlab.outline(line_width=0.1, extent=a)
     mlab.draw()
     mlab.show()
@@ -53,7 +53,8 @@ def plot_scalar_filed_contour_3d_example():
     option = 'scalar'
     M, MQ = field_3d(P, N3d, G, Q, A, function, option)
     LN = 20
-    Title = 'Name'
-    plot_scalar_filed_contour_3d(P, MQ, LN, Title)
+    title_main = 'title_main'
+    title_bar = 'title_bar'
+    plot_scalar_filed_contour_3d(P, MQ, LN, title_main, title_bar)
 
     return
