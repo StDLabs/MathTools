@@ -22,7 +22,7 @@ def plot_vector_field_3d(P, MQ, title_main, title_bar):
 
 def plot_vector_field_3d_example():
 
-    H = [1, 1, 1]
+    H = [3, 3, 3]
     D = [0, 0, 0, 0, 0, 0]
     T = [5, 5, 5]
     Sh = [0, 0, 0]

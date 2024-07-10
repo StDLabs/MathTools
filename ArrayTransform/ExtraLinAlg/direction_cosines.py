@@ -13,7 +13,6 @@ def direction_cosines(A) -> list:
         A = [A[3], A[4], A[5]]
     if len(A) == 3:
         An = np.linalg.norm(A)
-        print(An)
         d_cosines = [A[i] / An for i in range(0, 3)]
 
     return d_cosines
