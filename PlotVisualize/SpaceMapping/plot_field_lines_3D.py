@@ -6,7 +6,11 @@ import numpy as np
 
 def plot_field_lines_3D(P, MQ, seed_resolution, seed_visible, title_main, title_bar):
 
-    mlab.flow(MQ[0], MQ[1], MQ[2], seed_resolution=seed_resolution, seed_visible=seed_visible, line_width=4)
+    mlab.flow(MQ[0], MQ[1], MQ[2],
+              seed_resolution=seed_resolution,
+              seed_visible=seed_visible,
+              line_width=4,
+              integration_direction='both')
     mlab.axes(ranges=(-P[0], P[0], -P[1], P[1], -P[2], P[2]))
     mlab.colorbar(title=title_bar, orientation='vertical')
     mlab.title(title_main, size=0.3, height=0.95)
@@ -17,7 +21,7 @@ def plot_field_lines_3D(P, MQ, seed_resolution, seed_visible, title_main, title_
 
 
 def plot_field_lines_3D_example():
-
+    
     H = [2, 1, 1]
     D = [0, 0, 0, 0, 0, 0]
     T = [5, 5, 5]
