@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def plot_dots_planes_3d(G: list, PL: list, input_type, planes_key, key_save, key_show):
+def plot_dots_planes_3d(G: list, PL: list, P, input_type, planes_key, key_save, key_show):
     """
     Description
         This function creates a 3D plot that visualizes a set of points (dots) and planes in a 3D space
@@ -18,6 +18,7 @@ def plot_dots_planes_3d(G: list, PL: list, input_type, planes_key, key_save, key
 
     :param G: set of 3d vectors
     :param PL: PL = [Pl1, Pl2, ..., Pli], Pli = [Ai, Bi, Ci, Di] - set of planes (any)
+    :param P: P = [Px, Py, Pz] - defines the area bounds {{-Px,Px},{-Py,Py},{-Pz,Pz}} for calculations
     :param input_type: input_type = 0, 1 (see description)
     :param planes_key: planes_key = True means Pl contains at least one plane necessary for drawing
     :param key_save: True/False - whether save or not
@@ -61,7 +62,7 @@ def plot_dots_planes_3d(G: list, PL: list, input_type, planes_key, key_save, key
                 i1 = plane_info[3][0]
                 i2 = plane_info[3][1]
                 U = -PL[i][3] / PL[i][s]
-                K = np.arange(-5, 5, 0.25)
+                K = np.arange(-P[i1], P[i1], P[i1] / 10)
                 F = [0, 0, 0]
                 F[i1], F[i2] = np.meshgrid(K, K)
                 F[s] = (F[i1]**0 - F[i1]**0) + (F[i2]**0 - F[i2]**0) + U
@@ -101,6 +102,6 @@ def plot_dots_planes_3d_example():
 
     G = periodic_structure_cartesian_points_3d(H, D, T, True, Sh)
 
-    plot_dots_planes_3d(G, PL, input_type=0, planes_key=True, key_save=False, key_show=True)
+    plot_dots_planes_3d(G, PL, P, input_type=0, planes_key=True, key_save=False, key_show=True)
 
     return
