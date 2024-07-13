@@ -80,9 +80,6 @@ def plot_scalar_field_contour_map_example():
     G = periodic_structure_cartesian_points_3d(H, D, T, True, Sh)
     Q = [1 for i in range(0, len(G))]
 
-    # G = [[2.5, 2.5, 0], [-2.5, -2.5, 0]]
-    # Q = [1, 1]
-
     A = [1, 1, 0.5, 0]
     function = 'hyperbola'
     option = 'scalar'
